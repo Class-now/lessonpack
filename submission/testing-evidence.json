@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-09T19:12:59.782Z",
+  "generatorUrl": "file:///C:/For%20Claude/lessonpack/index.html",
+  "browser": "Chromium 156.0.8078.4",
+  "checks": [
+    {
+      "name": "axe-core: generator page (light)",
+      "ok": true,
+      "detail": "43 rules passed, 0 violations"
+    },
+    {
+      "name": "generator: reach 'Make the lesson file' with Tab only",
+      "ok": true,
+      "detail": [
+        "a:Skip to the generator",
+        "textarea:Lesson text",
+        "button:Make the lesson file"
+      ]
+    },
+    {
+      "name": "generator: focus moves to the Download link after generating",
+      "ok": true,
+      "detail": "Download at-the-train-station.html (23.6 KB)"
+    },
+    {
+      "name": "lesson file size < 100 KB",
+      "ok": true,
+      "detail": "23.6 KB (at-the-train-station.html)"
+    },
+    {
+      "name": "axe-core: generator page with preview iframe",
+      "ok": true,
+      "detail": "52 rules passed, 0 violations"
+    },
+    {
+      "name": "generator: teacher mistakes are explained with a line number",
+      "ok": true,
+      "detail": "Please fix 1 problem | Line 3: Question \"Where?\" needs exactly one correct choice (a line starting with +). It has 2. Go to line 3"
+    },
+    {
+      "name": "axe-core: generator page showing an error",
+      "ok": true,
+      "detail": "43 rules passed, 0 violations"
+    },
+    {
+      "name": "axe-core: generator page (dark mode)",
+      "ok": true,
+      "detail": "43 rules passed, 0 violations"
+    },
+    {
+      "name": "axe-core: learner file (default)",
+      "ok": true,
+      "detail": "44 rules passed, 0 violations"
+    },
+    {
+      "name": "learner: every Tab stop shows a visible focus outline (>= 2px)",
+      "ok": true,
+      "detail": "40 stops checked"
+    },
+    {
+      "name": "learner: first Tab is the skip link and it moves focus to the lesson",
+      "ok": true,
+      "detail": "レッスンへ移動 -> #lesson"
+    },
+    {
+      "name": "learner: '文字を大きく' toggles with Space and reports aria-pressed",
+      "ok": true,
+      "detail": "class .large=true, aria-pressed=true"
+    },
+    {
+      "name": "learner: 'ハイコントラスト' toggles with Space and reports aria-pressed",
+      "ok": true,
+      "detail": "class .contrast=true, aria-pressed=true"
+    },
+    {
+      "name": "learner: '読みやすい間隔' toggles with Space and reports aria-pressed",
+      "ok": true,
+      "detail": "class .spacing=true, aria-pressed=true"
+    },
+    {
+      "name": "axe-core: learner file (large + high contrast + easy-read spacing)",
+      "ok": true,
+      "detail": "44 rules passed, 0 violations"
+    },
+    {
+      "name": "learner: no sideways scrolling at 360px wide with large text + spacing",
+      "ok": true,
+      "detail": "overflow 0px"
+    },
+    {
+      "name": "learner: no sideways scrolling at 320px wide (large + spacing)",
+      "ok": true,
+      "detail": "overflow 0px"
+    },
+    {
+      "name": "learner: Listen button speaks that line in the lesson language",
+      "ok": true,
+      "detail": {
+        "text": "Excuse me. Where is platform 3?",
+        "lang": "en-US",
+        "rate": 1
+      }
+    },
+    {
+      "name": "learner: 'Listen to the whole dialogue' reads all 5 lines in order",
+      "ok": true,
+      "detail": "5 lines queued"
+    },
+    {
+      "name": "learner: quiz gives immediate feedback (arrow keys + Enter only)",
+      "ok": true,
+      "detail": {
+        "wrong": "まだです。もう一度やってみましょう。",
+        "right": "正解！ The staff member says \"It's next to the stairs, on the left.\""
+      }
+    },
+    {
+      "name": "learner: feedback is announced to screen readers (aria-live)",
+      "ok": true,
+      "detail": "aria-live=polite"
+    },
+    {
+      "name": "learner: typed answer accepts different case and punctuation",
+      "ok": true,
+      "detail": "正解！ Mika says \"One ticket to Green Park, please.\""
+    },
+    {
+      "name": "learner: progress and display settings survive closing and reopening (offline)",
+      "ok": true,
+      "detail": {
+        "before": "1/5 語を覚えた · 2/4 問正解",
+        "after": "1/5 語を覚えた · 2/4 問正解",
+        "contrastKept": true
+      }
+    },
+    {
+      "name": "axe-core: learner file after answering (feedback visible)",
+      "ok": true,
+      "detail": "44 rules passed, 0 violations"
+    },
+    {
+      "name": "axe-core: learner file (dark mode)",
+      "ok": true,
+      "detail": "47 rules passed, 0 violations"
+    },
+    {
+      "name": "fallback: without speechSynthesis there are no dead Listen buttons and a clear note",
+      "ok": true,
+      "detail": {
+        "listenButtons": 0,
+        "note": "このブラウザでは読み上げが使えません。文はすべて画面にあります。友だちと声に出して読んでみましょう。"
+      }
+    },
+    {
+      "name": "fallback: if storage is blocked the lesson still works and says progress is not saved",
+      "ok": true,
+      "detail": {
+        "errors": [],
+        "note": "このブラウザでは記録を保存できません。レッスンはすべて使えます。"
+      }
+    },
+    {
+      "name": "fallback: with JavaScript off, all text is readable and each answer can be opened",
+      "ok": true,
+      "detail": {
+        "answers": 4,
+        "settingsHidden": true
+      }
+    },
+    {
+      "name": "axe-core: learner file without its script (what a no-JS browser shows)",
+      "ok": true,
+      "detail": "43 rules passed, 0 violations"
+    },
+    {
+      "name": "no network requests to any other host",
+      "ok": true,
+      "detail": "0 external requests"
+    }
+  ],
+  "lessonFile": "submission/tmp/at-the-train-station.html",
+  "learnerTabOrderFirst15": [
+    "a: レッスンへ移動",
+    "button[button]: 文字を大きく",
+    "button[button]: ハイコントラスト",
+    "button[button]: 読みやすい間隔",
+    "button[button]: 訳を表示",
+    "button[button]: ゆっくり読む",
+    "button[button]: ■ 止める",
+    "a: 単語",
+    "a: 会話",
+    "a: 確認問題",
+    "button[button]: 聞く: ticket",
+    "button[button]: 聞く: One ticket to Green Park, please.",
+    "input[checkbox]: この単語は覚えた: ticket",
+    "button[button]: 聞く: platform",
+    "button[button]: 聞く: The train leaves from platform 3."
+  ],
+  "sizes": {
+    "sampleLessonKB": 23.6,
+    "generatorKB": 47
+  },
+  "summary": {
+    "passed": 30,
+    "failed": 0
+  }
+}

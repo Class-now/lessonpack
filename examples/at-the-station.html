@@ -78,7 +78,7 @@ footer{padding:2rem 1rem;color:var(--muted);font-size:.9rem}
 <li><a href="#dialogue">会話</a></li>
 <li><a href="#quiz">確認問題</a></li>
 </ol></nav></header>
-<main id="lesson" tabindex="-1">
+<main id="lesson" tabindex="-1" aria-label="At the Train Station">
 <p>Learn five words and a short conversation for asking the way at a station.</p>
 <section aria-labelledby="vocab"><h2 id="vocab">単語</h2><dl class="vocab">
 <div class="card"><dt class="line"><span class="txt"><span class="say" lang="en-US" data-say="ticket">ticket</span></span></dt>
@@ -146,7 +146,7 @@ footer{padding:2rem 1rem;color:var(--muted);font-size:.9rem}
 <progress id="progress-bar" value="0" max="1" aria-labelledby="progress-h"></progress><p id="progress-text" aria-live="polite"></p>
 <p class="note" id="save-note"></p><button type="button" class="secondary" id="reset">記録を消す</button></section>
 </main>
-<footer><p>LessonPack で作成</p></footer>
+<footer aria-label="LessonPack で作成"><p>LessonPack で作成</p></footer>
 <script type="application/json" id="lp-data">{"id":"ocgujp","lang":"en-US","ui":{"skip":"レッスンへ移動","settings":"表示と音声","large":"文字を大きく","contrast":"ハイコントラスト","spacing":"読みやすい間隔","trans":"訳を表示","slow":"ゆっくり読む","contents":"このレッスンの内容","vocab":"単語","dialogue":"会話","reading":"読み物","quiz":"確認問題","listen":"聞く","listenAll":"会話を全部聞く","stop":"止める","know":"この単語は覚えた","check":"答え合わせ","correct":"正解！","wrong":"まだです。もう一度やってみましょう。","showAnswer":"答えを見る","answerIs":"答え：","typeHere":"答えを入力","progress":"学習の進み具合","words":"語を覚えた","questions":"問正解","reset":"記録を消す","resetConfirm":"この端末に保存したこのレッスンの記録をすべて消しますか？","saved":"記録はこの端末の中だけに保存されます。どこにも送信しません。","notSaved":"このブラウザでは記録を保存できません。レッスンはすべて使えます。","noTts":"このブラウザでは読み上げが使えません。文はすべて画面にあります。友だちと声に出して読んでみましょう。","noVoice":"この言語の音声が端末に見つかりません。別の声で読まれることがあります。","ttsError":"読み上げが止まりました。文は画面に残っています。","offline":"このレッスンはインターネットなしで使えます。どのブラウザでも開けます。","level":"レベル","from":"作成","madeWith":"LessonPack で作成","example":"例文","hint":"ヒント","allDone":"よくできました！全問正解です。","noJs":"一部のボタンには JavaScript が必要です。レッスンは読めますし、答えは各問題の下で開けます。"}}</script>
 <script>(function learnerRuntime() {
     var doc = document, root = doc.documentElement;
@@ -276,8 +276,9 @@ footer{padding:2rem 1rem;color:var(--muted);font-size:.9rem}
       fs.insertBefore(btn, fb);
       function show(ok, tries) {
         fb.className = "fb " + (ok ? "ok" : "bad");
-        fb.textContent = ok ? T.correct + (fs.getAttribute("data-hint") ? " " + fs.getAttribute("data-hint") : "")
-          : T.wrong + (tries >= 2 && fs.getAttribute("data-hint") ? " " + T.hint + ": " + fs.getAttribute("data-hint") : "");
+        var hint = fs.getAttribute("data-hint");
+        fb.textContent = ok ? T.correct : T.wrong + (tries >= 2 && hint ? " " + T.hint + ":" : "");
+        if (hint && (ok || tries >= 2)) fb.appendChild(make("span", { lang: cfg.lang }, " " + hint));
         if (!ok && tries >= 2) details.className = details.className.replace(/ ?jsHide/, "");
       }
       // restore saved state

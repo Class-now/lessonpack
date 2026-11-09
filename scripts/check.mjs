@@ -235,8 +235,14 @@ const lessonUrl = pathToFileURL(ev.lessonFile).href;
   const answers = await page.locator("details.ans").count();
   const settingsHidden = await page.locator("#settings").isHidden();
   record("fallback: with JavaScript off, all text is readable and each answer can be opened", /Excuse me/.test(text) && answers === 4 && settingsHidden, { answers, settingsHidden });
-  await axe(page, "learner file with JavaScript off").catch(() => record("axe-core: learner file with JavaScript off", true, "skipped (axe needs JS in the page)"));
   await ctx.close();
+  // axe needs JS to run, so scan the same static markup with the lesson's runtime script removed.
+  const ctx2 = await browser.newContext({ offline: true });
+  const p2 = await ctx2.newPage();
+  const staticHtml = readFileSync(ev.lessonFile, "utf8").replace(/<script>\(function learnerRuntime[\s\S]*?<\/script>/, "");
+  await p2.setContent(staticHtml);
+  await axe(p2, "learner file without its script (what a no-JS browser shows)");
+  await ctx2.close();
 }
 
 record("no network requests to any other host", external.length === 0, external.length ? external : "0 external requests");
@@ -244,6 +250,7 @@ const sampleBytes = statSync(join(root, "examples", "at-the-station.html")).size
 ev.sizes = { sampleLessonKB: +(sampleBytes / 1024).toFixed(1), generatorKB: +((statSync(join(root, "index.html")).size + statSync(join(root, "core.js")).size + statSync(join(root, "app.js")).size) / 1024).toFixed(1) };
 await browser.close();
 ev.summary = { passed: ev.checks.length - failed, failed };
+ev.lessonFile = ev.lessonFile.slice(root.length + 1).replace(/\\/g, "/");
 writeFileSync(join(outDir, "testing-evidence.json"), JSON.stringify(ev, null, 2));
 console.log(`\n${ev.checks.length - failed}/${ev.checks.length} checks passed. Sizes: ${JSON.stringify(ev.sizes)}`);
 process.exit(failed ? 1 : 0);

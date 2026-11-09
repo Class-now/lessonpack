@@ -43,7 +43,7 @@ footer{padding:2rem 1rem;color:var(--muted);font-size:.9rem}
   <p class="lead">Paste a short language lesson. Get <strong>one small HTML file</strong> that a learner can open on an old shared phone with <strong>no data</strong>: sent by Bluetooth, USB cable, SD card or a messaging app. It has read-aloud, a self-check quiz, large text, high contrast and easy-read spacing, and it saves progress on the phone.</p>
   <p class="muted">Everything happens in this page. Nothing you type is uploaded. After one visit this page also works offline.</p>
 </header>
-<main id="main" tabindex="-1">
+<main id="main" tabindex="-1" aria-label="Lesson generator">
   <div class="cols">
     <section aria-labelledby="write-h">
       <h2 id="write-h">1. Write or paste the lesson</h2>
@@ -110,7 +110,7 @@ A: Green Park | to Green Park   (typed answer; | separates accepted answers)</pr
     <button type="button" class="secondary" id="save-tool" hidden>Download LessonPack itself as one offline file</button>
   </section>
 </main>
-<footer>
+<footer aria-label="About this project">
   <p>LessonPack, MIT License. Open source: <a href="https://github.com/Class-now/lessonpack">github.com/Class-now/lessonpack</a>. All example content is fictional.</p>
 </footer>
 <script src="core.js"></script>

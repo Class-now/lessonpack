@@ -1,0 +1,67 @@
+1
+00:00:00,065 --> 00:00:05,584
+Meet Aya (fictional): a beginner English learner with an old shared phone and no mobile data.
+
+2
+00:00:05,584 --> 00:00:11,391
+Before: her teacher's lesson lives online. With no connection, she can't study at home at all.
+
+3
+00:00:11,391 --> 00:00:17,767
+LessonPack: the teacher pastes a short lesson in plain text: words, a dialogue, questions.
+
+4
+00:00:17,767 --> 00:00:22,858
+Simple format: 'word = meaning', 'Speaker: line = translation', '+' marks the right answer.
+
+5
+00:00:22,858 --> 00:00:29,099
+One click (or Enter) makes ONE self-contained HTML file. No account, no server, no upload.
+
+6
+00:00:29,099 --> 00:00:34,594
+24 KB. Send it by Bluetooth, USB cable, SD card or a chat app. It never needs the internet again.
+
+7
+00:00:34,594 --> 00:00:39,600
+After: Aya opens the file with Wi-Fi and data off. Everything works.
+
+8
+00:00:39,600 --> 00:00:46,113
+Display options: larger text, high contrast, and easy-read spacing for dyslexic readers.
+
+9
+00:00:46,113 --> 00:00:51,262
+Every word and line has a Listen button. It uses the phone's own offline voice, at normal or slow speed.
+
+10
+00:00:51,262 --> 00:00:56,344
+If the phone has no speech engine, the buttons are hidden and a note says so. The text is always there.
+
+11
+00:00:56,344 --> 00:01:01,520
+Translations can be hidden for self-testing. The page is all real headings, labels and buttons for screen readers.
+
+12
+00:01:01,520 --> 00:01:06,376
+Self-check quiz with immediate feedback, fully keyboard-operable.
+
+13
+00:01:06,376 --> 00:01:11,088
+Wrong first? 'Not yet, try again' — after two tries it shows a hint from the dialogue.
+
+14
+00:01:11,088 --> 00:01:16,501
+Typed answers are forgiving about capitals and punctuation.
+
+15
+00:01:16,501 --> 00:01:22,438
+Progress is saved on the phone itself. Close the file, reopen it tomorrow: it is still there.
+
+16
+00:01:22,438 --> 00:01:27,983
+Tested: axe-core 0 violations, keyboard-only walkthrough, 320px screens, JavaScript-off and no-speech fallbacks.
+
+17
+00:01:27,983 --> 00:01:33,014
+LessonPack: one barrier removed. No data, no problem. Open source, MIT. class-now.github.io/lessonpack

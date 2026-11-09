@@ -384,8 +384,9 @@
       fs.insertBefore(btn, fb);
       function show(ok, tries) {
         fb.className = "fb " + (ok ? "ok" : "bad");
-        fb.textContent = ok ? T.correct + (fs.getAttribute("data-hint") ? " " + fs.getAttribute("data-hint") : "")
-          : T.wrong + (tries >= 2 && fs.getAttribute("data-hint") ? " " + T.hint + ": " + fs.getAttribute("data-hint") : "");
+        var hint = fs.getAttribute("data-hint");
+        fb.textContent = ok ? T.correct : T.wrong + (tries >= 2 && hint ? " " + T.hint + ":" : "");
+        if (hint && (ok || tries >= 2)) fb.appendChild(make("span", { lang: cfg.lang }, " " + hint));
         if (!ok && tries >= 2) details.className = details.className.replace(/ ?jsHide/, "");
       }
       // restore saved state
@@ -480,7 +481,7 @@
     h.push('<nav aria-label="' + esc(T.contents) + '"><ol class="toc">');
     for (var t = 0; t < toc.length; t++) h.push('<li><a href="#' + toc[t][0] + '">' + esc(toc[t][1]) + "</a></li>");
     h.push("</ol></nav></header>");
-    h.push('<main id="lesson" tabindex="-1">');
+    h.push('<main id="lesson" tabindex="-1" aria-label="' + esc(lesson.title) + '">');
     if (lesson.intro) h.push("<p>" + esc(lesson.intro) + "</p>");
 
     var i;
@@ -543,7 +544,7 @@
     h.push('<progress id="progress-bar" value="0" max="1" aria-labelledby="progress-h"></progress><p id="progress-text" aria-live="polite"></p>');
     h.push('<p class="note" id="save-note"></p><button type="button" class="secondary" id="reset">' + esc(T.reset) + "</button></section>");
     h.push("</main>");
-    h.push("<footer><p>" + esc(T.madeWith) + (opts.date ? " \u00B7 " + esc(opts.date) : "") + "</p></footer>");
+    h.push('<footer aria-label="' + esc(T.madeWith) + '"><p>' + esc(T.madeWith) + (opts.date ? " \u00B7 " + esc(opts.date) : "") + "</p></footer>");
     var data = JSON.stringify({ id: id, lang: L, ui: T });
     h.push('<script type="application/json" id="lp-data">' + data.replace(/</g, "\\u003c") + "</script>");
     h.push("<script>(" + learnerRuntime.toString().replace(/<\//g, "<\\/") + ")();</script>");

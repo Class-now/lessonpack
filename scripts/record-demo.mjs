@@ -14,6 +14,8 @@ mkdirSync(join(sub, "tmp"), { recursive: true });
 
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, recordVideo: { dir: out, size: { width: 1280, height: 720 } }, acceptDownloads: true });
+// Headless Chromium here lists no English voice; a typical phone has one, so record that case.
+await context.addInitScript(() => { if (window.speechSynthesis) window.speechSynthesis.getVoices = () => [{ lang: "en-US", name: "English (phone)" }]; });
 const page = await context.newPage();
 const t0 = Date.now();
 const lines = [];

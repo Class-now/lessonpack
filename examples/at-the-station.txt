@@ -1,0 +1,41 @@
+Title: At the Train Station
+Language: en-US
+Notes language: ja
+Interface: ja
+Level: Beginner (A1)
+Teacher: Sample class (fictional)
+Intro: Learn five words and a short conversation for asking the way at a station.
+
+[Vocabulary]
+ticket = 切符 | One ticket to Green Park, please.
+platform = ホーム（乗り場） | The train leaves from platform 3.
+stairs = 階段 | The stairs are on the left.
+next to = ～の隣に | The shop is next to the gate.
+leave = 出発する | The next train leaves at ten.
+
+[Dialogue]
+Mika: Excuse me. Where is platform 3? = すみません。3番ホームはどこですか？
+Staff: It's next to the stairs, on the left. = 階段の隣、左側です。
+Mika: Thank you. When does the next train leave? = ありがとうございます。次の電車はいつ出発しますか？
+Staff: It leaves at ten o'clock. = 10時に出発します。
+Mika: Great. One ticket to Green Park, please. = よかった。グリーンパークまで切符を1枚ください。
+
+[Questions]
+Q: Where is platform 3?
++ Next to the stairs
+- Next to the shop
+- On the second floor
+Why: The staff member says "It's next to the stairs, on the left."
+
+Q: When does the next train leave?
+- At nine o'clock
++ At ten o'clock
+- At eleven o'clock
+Why: "It leaves at ten o'clock."
+
+Q: Where does Mika want to go?
+A: Green Park | to Green Park
+Why: Mika says "One ticket to Green Park, please."
+
+Q: Type the English word for 階段.
+A: stairs | the stairs

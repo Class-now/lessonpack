@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="LessonPack"><meta name="color-scheme" content="light dark">
+<title>At the Train Station</title><style>:root{--bg:#fff;--fg:#1a1a1a;--muted:#4a4a4a;--card:#f5f6f8;--line:#c9ccd1;--accent:#0b57a4;--accent-fg:#fff;--ok:#0f6b2f;--bad:#a3201a;--focus:#b35c00;font-size:100%}
+@media (prefers-color-scheme:dark){:root:not(.contrast){--bg:#121417;--fg:#eceff3;--muted:#c3c8cf;--card:#1d2126;--line:#4a515a;--accent:#8cc4ff;--accent-fg:#0b1a2b;--ok:#7be39b;--bad:#ff9e98;--focus:#ffc46b}}
+:root.contrast{--bg:#000;--fg:#fff;--muted:#fff;--card:#000;--line:#fff;--accent:#ffeb3b;--accent-fg:#000;--ok:#7dff9b;--bad:#ffb4ab;--focus:#00e5ff}
+:root.large{font-size:131.25%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:1rem/1.6 system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans JP',sans-serif;-webkit-text-size-adjust:100%}
+.spacing body{line-height:2;letter-spacing:.12em;word-spacing:.16em}
+.spacing p,.spacing li,.spacing dd{margin-bottom:2em;text-align:left;max-width:34em}
+.spacing i,.spacing em{font-style:normal}
+main,header,footer{max-width:46rem;margin:0 auto;padding:0 1rem}
+a{color:var(--accent)}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--accent-fg);padding:.6rem 1rem;z-index:9}
+.skip:focus{left:0}
+:focus{outline:3px solid var(--focus);outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+h1{font-size:1.6rem;line-height:1.25;margin:1rem 0 .25rem}
+h2{font-size:1.3rem;margin:2rem 0 .5rem;border-bottom:2px solid var(--line);padding-bottom:.25rem}
+.meta,.note{color:var(--muted)}
+.note{font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.75rem 1rem;margin:.75rem 0}
+button,.btn,input[type=text]{font:inherit;min-height:44px}
+button,.btn{background:var(--accent);color:var(--accent-fg);border:2px solid var(--accent);border-radius:.5rem;padding:.4rem .9rem;cursor:pointer;margin:.2rem .4rem .2rem 0}
+button.secondary{background:transparent;color:var(--accent)}
+button[aria-pressed=true]{box-shadow:inset 0 0 0 3px var(--accent-fg)}
+button[aria-pressed=true]::before{content:'\2713  '}
+.toolbar{display:flex;flex-wrap:wrap;gap:.25rem;padding:0;margin:0;border:0}
+.toolbar legend{font-weight:700;margin-bottom:.25rem;padding:0}
+ol.toc{padding-left:1.4rem}
+ol.toc a{display:inline-block;padding:.35rem 0}
+.line{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .75rem}
+.line .txt{flex:1 1 14rem}
+.say{font-size:1.1rem}
+.speaker{font-weight:700}
+.trans{display:block;color:var(--muted);font-size:.95rem}
+.hide-trans .trans{display:none}
+dl.vocab dt{font-size:1.2rem;font-weight:700}
+dl.vocab dd{margin:0}
+label.know{display:flex;align-items:center;gap:.5rem;min-height:44px}
+input[type=checkbox],input[type=radio]{width:1.4rem;height:1.4rem;accent-color:var(--accent);flex:none}
+fieldset.q{border:1px solid var(--line);border-radius:.6rem;margin:1rem 0;padding:.75rem 1rem;background:var(--card)}
+fieldset.q legend{font-weight:700;padding:0 .25rem;font-size:1.05rem}
+.opt{display:flex;align-items:center;gap:.6rem;min-height:44px;padding:.15rem 0}
+input[type=text]{width:100%;max-width:24rem;padding:.4rem .6rem;border:2px solid var(--line);border-radius:.4rem;background:var(--bg);color:var(--fg)}
+.fb{font-weight:700;margin:.5rem 0 0;min-height:1.6em}
+.fb.ok{color:var(--ok)}
+.fb.ok::before{content:'\2714  '}
+.fb.bad{color:var(--bad)}
+.fb.bad::before{content:'\2716  '}
+details.ans summary{cursor:pointer;color:var(--accent);min-height:44px;padding-top:.5rem}
+.js details.ans.jsHide{display:none}
+progress{width:100%;height:1rem;accent-color:var(--accent)}
+.status{min-height:1.4em}
+footer{padding:2rem 1rem;color:var(--muted);font-size:.9rem}
+[hidden]{display:none!important}
+@media print{.toolbar,.skip,button,.tts-note,#progress-box{display:none!important}details.ans{display:block}details.ans>*{display:block}body{color:#000;background:#fff}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}</style></head><body>
+<a class="skip" href="#lesson">レッスンへ移動</a>
+<header aria-label="At the Train Station"><h1 lang="en-US">At the Train Station</h1>
+<p class="meta">レベル: Beginner (A1) · 作成: Sample class (fictional)</p>
+<p class="note">このレッスンはインターネットなしで使えます。どのブラウザでも開けます。</p>
+<p class="note" id="nojs">一部のボタンには JavaScript が必要です。レッスンは読めますし、答えは各問題の下で開けます。</p>
+<fieldset class="toolbar card" id="settings" hidden><legend>表示と音声</legend>
+<button type="button" data-setting="large" aria-pressed="false">文字を大きく</button>
+<button type="button" data-setting="contrast" aria-pressed="false">ハイコントラスト</button>
+<button type="button" data-setting="spacing" aria-pressed="false">読みやすい間隔</button>
+<button type="button" data-setting="hideTrans" aria-pressed="true">訳を表示</button>
+<button type="button" data-setting="slow" aria-pressed="false" id="slow" hidden>ゆっくり読む</button>
+<button type="button" class="secondary" id="stop" hidden>■ 止める</button>
+</fieldset>
+<p class="note tts-note" id="tts-note" role="status" hidden></p>
+<nav aria-label="このレッスンの内容"><ol class="toc">
+<li><a href="#vocab">単語</a></li>
+<li><a href="#dialogue">会話</a></li>
+<li><a href="#quiz">確認問題</a></li>
+</ol></nav></header>
+<main id="lesson" tabindex="-1">
+<p>Learn five words and a short conversation for asking the way at a station.</p>
+<section aria-labelledby="vocab"><h2 id="vocab">単語</h2><dl class="vocab">
+<div class="card"><dt class="line"><span class="txt"><span class="say" lang="en-US" data-say="ticket">ticket</span></span></dt>
+<dd lang="ja" class="trans">切符</dd>
+<dd class="line"><span class="txt"><span class="meta">例文: </span><span class="say" lang="en-US" data-say="One ticket to Green Park, please.">One ticket to Green Park, please.</span></span></dd>
+<dd><label class="know"><input type="checkbox" data-word="w0"> この単語は覚えた: <span lang="en-US">ticket</span></label></dd></div>
+<div class="card"><dt class="line"><span class="txt"><span class="say" lang="en-US" data-say="platform">platform</span></span></dt>
+<dd lang="ja" class="trans">ホーム（乗り場）</dd>
+<dd class="line"><span class="txt"><span class="meta">例文: </span><span class="say" lang="en-US" data-say="The train leaves from platform 3.">The train leaves from platform 3.</span></span></dd>
+<dd><label class="know"><input type="checkbox" data-word="w1"> この単語は覚えた: <span lang="en-US">platform</span></label></dd></div>
+<div class="card"><dt class="line"><span class="txt"><span class="say" lang="en-US" data-say="stairs">stairs</span></span></dt>
+<dd lang="ja" class="trans">階段</dd>
+<dd class="line"><span class="txt"><span class="meta">例文: </span><span class="say" lang="en-US" data-say="The stairs are on the left.">The stairs are on the left.</span></span></dd>
+<dd><label class="know"><input type="checkbox" data-word="w2"> この単語は覚えた: <span lang="en-US">stairs</span></label></dd></div>
+<div class="card"><dt class="line"><span class="txt"><span class="say" lang="en-US" data-say="next to">next to</span></span></dt>
+<dd lang="ja" class="trans">～の隣に</dd>
+<dd class="line"><span class="txt"><span class="meta">例文: </span><span class="say" lang="en-US" data-say="The shop is next to the gate.">The shop is next to the gate.</span></span></dd>
+<dd><label class="know"><input type="checkbox" data-word="w3"> この単語は覚えた: <span lang="en-US">next to</span></label></dd></div>
+<div class="card"><dt class="line"><span class="txt"><span class="say" lang="en-US" data-say="leave">leave</span></span></dt>
+<dd lang="ja" class="trans">出発する</dd>
+<dd class="line"><span class="txt"><span class="meta">例文: </span><span class="say" lang="en-US" data-say="The next train leaves at ten.">The next train leaves at ten.</span></span></dd>
+<dd><label class="know"><input type="checkbox" data-word="w4"> この単語は覚えた: <span lang="en-US">leave</span></label></dd></div>
+</dl></section>
+<section aria-labelledby="dialogue-h" id="dialogue"><h2 id="dialogue-h">会話</h2>
+<button type="button" id="listen-all" hidden>▶ 会話を全部聞く</button>
+<ol class="lines" style="list-style:none;padding:0">
+<li class="card"><p class="line" style="margin:0"><span class="txt"><span class="speaker">Mika:</span> <span class="say" lang="en-US" data-say="Excuse me. Where is platform 3?">Excuse me. Where is platform 3?</span></span></p><span class="trans" lang="ja">すみません。3番ホームはどこですか？</span></li>
+<li class="card"><p class="line" style="margin:0"><span class="txt"><span class="speaker">Staff:</span> <span class="say" lang="en-US" data-say="It&#39;s next to the stairs, on the left.">It&#39;s next to the stairs, on the left.</span></span></p><span class="trans" lang="ja">階段の隣、左側です。</span></li>
+<li class="card"><p class="line" style="margin:0"><span class="txt"><span class="speaker">Mika:</span> <span class="say" lang="en-US" data-say="Thank you. When does the next train leave?">Thank you. When does the next train leave?</span></span></p><span class="trans" lang="ja">ありがとうございます。次の電車はいつ出発しますか？</span></li>
+<li class="card"><p class="line" style="margin:0"><span class="txt"><span class="speaker">Staff:</span> <span class="say" lang="en-US" data-say="It leaves at ten o&#39;clock.">It leaves at ten o&#39;clock.</span></span></p><span class="trans" lang="ja">10時に出発します。</span></li>
+<li class="card"><p class="line" style="margin:0"><span class="txt"><span class="speaker">Mika:</span> <span class="say" lang="en-US" data-say="Great. One ticket to Green Park, please.">Great. One ticket to Green Park, please.</span></span></p><span class="trans" lang="ja">よかった。グリーンパークまで切符を1枚ください。</span></li>
+</ol></section>
+<section aria-labelledby="quiz"><h2 id="quiz">確認問題</h2>
+<fieldset class="q" data-q="q0" data-type="choice" data-hint="The staff member says &quot;It&#39;s next to the stairs, on the left.&quot;">
+<legend>1. <span lang="en-US">Where is platform 3?</span></legend>
+<label class="opt"><input type="radio" name="q0" value="0" data-c> <span lang="en-US">Next to the stairs</span></label>
+<label class="opt"><input type="radio" name="q0" value="1"> <span lang="en-US">Next to the shop</span></label>
+<label class="opt"><input type="radio" name="q0" value="2"> <span lang="en-US">On the second floor</span></label>
+<p class="fb" aria-live="polite"></p>
+<details class="ans"><summary>答えを見る</summary><p>答え： <span lang="en-US">Next to the stairs</span><br>ヒント: The staff member says &quot;It&#39;s next to the stairs, on the left.&quot;</p></details>
+</fieldset>
+<fieldset class="q" data-q="q1" data-type="choice" data-hint="&quot;It leaves at ten o&#39;clock.&quot;">
+<legend>2. <span lang="en-US">When does the next train leave?</span></legend>
+<label class="opt"><input type="radio" name="q1" value="0"> <span lang="en-US">At nine o&#39;clock</span></label>
+<label class="opt"><input type="radio" name="q1" value="1" data-c> <span lang="en-US">At ten o&#39;clock</span></label>
+<label class="opt"><input type="radio" name="q1" value="2"> <span lang="en-US">At eleven o&#39;clock</span></label>
+<p class="fb" aria-live="polite"></p>
+<details class="ans"><summary>答えを見る</summary><p>答え： <span lang="en-US">At ten o&#39;clock</span><br>ヒント: &quot;It leaves at ten o&#39;clock.&quot;</p></details>
+</fieldset>
+<fieldset class="q" data-q="q2" data-type="typed" data-ans="[&quot;Green Park&quot;,&quot;to Green Park&quot;]" data-hint="Mika says &quot;One ticket to Green Park, please.&quot;">
+<legend>3. <span lang="en-US">Where does Mika want to go?</span></legend>
+<label for="q2i">答えを入力</label><br><input type="text" id="q2i" lang="en-US" autocomplete="off" autocapitalize="off" spellcheck="false">
+<p class="fb" aria-live="polite"></p>
+<details class="ans"><summary>答えを見る</summary><p>答え： <span lang="en-US">Green Park</span><br>ヒント: Mika says &quot;One ticket to Green Park, please.&quot;</p></details>
+</fieldset>
+<fieldset class="q" data-q="q3" data-type="typed" data-ans="[&quot;stairs&quot;,&quot;the stairs&quot;]">
+<legend>4. <span lang="en-US">Type the English word for 階段.</span></legend>
+<label for="q3i">答えを入力</label><br><input type="text" id="q3i" lang="en-US" autocomplete="off" autocapitalize="off" spellcheck="false">
+<p class="fb" aria-live="polite"></p>
+<details class="ans"><summary>答えを見る</summary><p>答え： <span lang="en-US">stairs</span></p></details>
+</fieldset>
+<p id="done" class="fb ok" role="status" hidden>よくできました！全問正解です。</p>
+</section>
+<section id="progress-box" class="card" aria-labelledby="progress-h" hidden><h2 id="progress-h">学習の進み具合</h2>
+<progress id="progress-bar" value="0" max="1" aria-labelledby="progress-h"></progress><p id="progress-text" aria-live="polite"></p>
+<p class="note" id="save-note"></p><button type="button" class="secondary" id="reset">記録を消す</button></section>
+</main>
+<footer><p>LessonPack で作成</p></footer>
+<script type="application/json" id="lp-data">{"id":"ocgujp","lang":"en-US","ui":{"skip":"レッスンへ移動","settings":"表示と音声","large":"文字を大きく","contrast":"ハイコントラスト","spacing":"読みやすい間隔","trans":"訳を表示","slow":"ゆっくり読む","contents":"このレッスンの内容","vocab":"単語","dialogue":"会話","reading":"読み物","quiz":"確認問題","listen":"聞く","listenAll":"会話を全部聞く","stop":"止める","know":"この単語は覚えた","check":"答え合わせ","correct":"正解！","wrong":"まだです。もう一度やってみましょう。","showAnswer":"答えを見る","answerIs":"答え：","typeHere":"答えを入力","progress":"学習の進み具合","words":"語を覚えた","questions":"問正解","reset":"記録を消す","resetConfirm":"この端末に保存したこのレッスンの記録をすべて消しますか？","saved":"記録はこの端末の中だけに保存されます。どこにも送信しません。","notSaved":"このブラウザでは記録を保存できません。レッスンはすべて使えます。","noTts":"このブラウザでは読み上げが使えません。文はすべて画面にあります。友だちと声に出して読んでみましょう。","noVoice":"この言語の音声が端末に見つかりません。別の声で読まれることがあります。","ttsError":"読み上げが止まりました。文は画面に残っています。","offline":"このレッスンはインターネットなしで使えます。どのブラウザでも開けます。","level":"レベル","from":"作成","madeWith":"LessonPack で作成","example":"例文","hint":"ヒント","allDone":"よくできました！全問正解です。","noJs":"一部のボタンには JavaScript が必要です。レッスンは読めますし、答えは各問題の下で開けます。"}}</script>
+<script>(function learnerRuntime() {
+    var doc = document, root = doc.documentElement;
+    var cfg = JSON.parse(doc.getElementById("lp-data").textContent);
+    var T = cfg.ui, KEY = "lessonpack:" + cfg.id;
+    root.className += " js";
+    function $(sel, el) { return (el || doc).querySelector(sel); }
+    function $$(sel, el) { return Array.prototype.slice.call((el || doc).querySelectorAll(sel)); }
+    function make(tag, attrs, text) {
+      var e = doc.createElement(tag);
+      for (var k in attrs) if (attrs.hasOwnProperty(k)) e.setAttribute(k, attrs[k]);
+      if (text != null) e.textContent = text;
+      return e;
+    }
+
+    // --- storage (falls back to memory if the browser blocks it) ---
+    var mem = {}, canSave = true;
+    try { localStorage.setItem(KEY + ":t", "1"); localStorage.removeItem(KEY + ":t"); } catch (e) { canSave = false; }
+    function load() {
+      try { return JSON.parse((canSave ? localStorage.getItem(KEY) : mem[KEY]) || "{}") || {}; } catch (e) { return {}; }
+    }
+    var state = load();
+    state.s = state.s || {}; state.w = state.w || {}; state.q = state.q || {};
+    function save() {
+      var s = JSON.stringify(state);
+      if (canSave) { try { localStorage.setItem(KEY, s); } catch (e) { canSave = false; mem[KEY] = s; } } else mem[KEY] = s;
+    }
+    $("#save-note").textContent = canSave ? T.saved : T.notSaved;
+
+    // --- display settings ---
+    var settings = [["large", "large"], ["contrast", "contrast"], ["spacing", "spacing"], ["hideTrans", "hide-trans"]];
+    function applySettings() {
+      for (var i = 0; i < settings.length; i++) {
+        var on = !!state.s[settings[i][0]];
+        var cls = " " + settings[i][1];
+        root.className = (" " + root.className + " ").replace(cls + " ", " ").replace(/^ +| +$/g, "") + (on ? cls : "");
+      }
+      $$("[data-setting]").forEach(function (b) {
+        var k = b.getAttribute("data-setting");
+        var on = k === "hideTrans" ? !state.s.hideTrans : !!state.s[k];
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+    $$("[data-setting]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var k = b.getAttribute("data-setting");
+        state.s[k] = !state.s[k];
+        save(); applySettings();
+      });
+    });
+    $("#settings").hidden = false;
+    applySettings();
+
+    // --- text to speech ---
+    var synth = window.speechSynthesis, hasTts = !!(synth && window.SpeechSynthesisUtterance);
+    var ttsNote = $("#tts-note"), queue = [];
+    function voiceFor(lang) {
+      var vs = [];
+      try { vs = synth.getVoices() || []; } catch (e) { vs = []; }
+      var base = lang.toLowerCase().split("-")[0], best = null;
+      for (var i = 0; i < vs.length; i++) {
+        var vl = String(vs[i].lang || "").toLowerCase().replace("_", "-");
+        if (vl === lang.toLowerCase()) return vs[i];
+        if (!best && vl.split("-")[0] === base) best = vs[i];
+      }
+      return best;
+    }
+    function speak(texts) {
+      if (!hasTts) return;
+      try { synth.cancel(); } catch (e) {}
+      queue = texts.slice();
+      next();
+    }
+    function next() {
+      if (!queue.length) return;
+      var u = new SpeechSynthesisUtterance(queue.shift());
+      u.lang = cfg.lang;
+      var v = voiceFor(cfg.lang);
+      if (v) { try { u.voice = v; } catch (e) {} }
+      u.rate = state.s.slow ? 0.7 : 1;
+      u.onend = next;
+      u.onerror = function (ev) {
+        queue = [];
+        if (ev && (ev.error === "canceled" || ev.error === "interrupted")) return;
+        ttsNote.textContent = T.ttsError; ttsNote.hidden = false;
+      };
+      try { synth.speak(u); } catch (e) { ttsNote.textContent = T.ttsError; ttsNote.hidden = false; }
+    }
+    if (hasTts) {
+      $$("[data-say]").forEach(function (el) {
+        var text = el.getAttribute("data-say");
+        var b = make("button", { type: "button", "class": "secondary", "aria-label": T.listen + ": " + text }, "\u25B6 " + T.listen);
+        b.addEventListener("click", function () { speak([text]); });
+        el.parentNode.insertBefore(b, el.nextSibling);
+      });
+      var all = $("#listen-all");
+      if (all) {
+        all.hidden = false;
+        all.addEventListener("click", function () {
+          speak($$("#dialogue [data-say]").map(function (e) { return e.getAttribute("data-say"); }));
+        });
+      }
+      $("#stop").hidden = false;
+      $("#stop").addEventListener("click", function () { queue = []; try { synth.cancel(); } catch (e) {} });
+      $("#slow").hidden = false;
+      var checkVoice = function () { if (!voiceFor(cfg.lang) && (synth.getVoices() || []).length) { ttsNote.textContent = T.noVoice; ttsNote.hidden = false; } };
+      if ("onvoiceschanged" in synth) synth.onvoiceschanged = checkVoice;
+      setTimeout(checkVoice, 1500);
+    } else {
+      ttsNote.textContent = T.noTts; ttsNote.hidden = false;
+    }
+
+    // --- words I know ---
+    $$("input[data-word]").forEach(function (c) {
+      var id = c.getAttribute("data-word");
+      c.checked = !!state.w[id];
+      c.addEventListener("change", function () { state.w[id] = c.checked; save(); updateProgress(); });
+    });
+
+    // --- quiz: check answers with immediate feedback ---
+    function norm(s) { return String(s).toLowerCase().replace(/[\u2018\u2019]/g, "'").replace(/[.,!?;:"\u3002\u3001\uff01\uff1f\u00bf\u00a1]/g, "").replace(/\s+/g, " ").replace(/^ | $/g, ""); }
+    $$("fieldset.q").forEach(function (fs) {
+      var id = fs.getAttribute("data-q"), type = fs.getAttribute("data-type");
+      var details = $("details.ans", fs), fb = $(".fb", fs), st = state.q[id] || {};
+      details.className += " jsHide";
+      var btn = make("button", { type: "button" }, T.check);
+      fs.insertBefore(btn, fb);
+      function show(ok, tries) {
+        fb.className = "fb " + (ok ? "ok" : "bad");
+        fb.textContent = ok ? T.correct + (fs.getAttribute("data-hint") ? " " + fs.getAttribute("data-hint") : "")
+          : T.wrong + (tries >= 2 && fs.getAttribute("data-hint") ? " " + T.hint + ": " + fs.getAttribute("data-hint") : "");
+        if (!ok && tries >= 2) details.className = details.className.replace(/ ?jsHide/, "");
+      }
+      // restore saved state
+      if (st.v != null) {
+        if (type === "choice") { var r = $("input[value='" + st.v + "']", fs); if (r) r.checked = true; }
+        else $("input[type=text]", fs).value = st.v;
+        if (st.ok) show(true, st.n || 1);
+      }
+      btn.addEventListener("click", function () {
+        var v, ok;
+        if (type === "choice") {
+          var picked = $("input[type=radio]:checked", fs);
+          if (!picked) { fb.className = "fb bad"; fb.textContent = T.wrong; return; }
+          v = picked.value; ok = picked.hasAttribute("data-c");
+        } else {
+          v = $("input[type=text]", fs).value;
+          var ans = JSON.parse(fs.getAttribute("data-ans")); ok = false;
+          for (var i = 0; i < ans.length; i++) if (norm(ans[i]) === norm(v)) ok = true;
+        }
+        st.n = (st.n || 0) + 1; st.v = v; st.ok = ok;
+        state.q[id] = st; save();
+        show(ok, st.n);
+        updateProgress();
+      });
+    });
+
+    // --- progress summary ---
+    var nWords = $$("input[data-word]").length, nQ = $$("fieldset.q").length;
+    function updateProgress() {
+      var w = 0, q = 0, k;
+      for (k in state.w) if (state.w[k]) w++;
+      for (k in state.q) if (state.q[k] && state.q[k].ok) q++;
+      var bar = $("#progress-bar");
+      bar.max = (nWords + nQ) || 1; bar.value = w + q;
+      $("#progress-text").textContent = (nWords ? w + "/" + nWords + " " + T.words : "") + (nWords && nQ ? " \u00B7 " : "") + (nQ ? q + "/" + nQ + " " + T.questions : "");
+      $("#done").hidden = !(nQ && q === nQ);
+    }
+    $("#progress-box").hidden = false;
+    $("#reset").addEventListener("click", function () {
+      if (!window.confirm(T.resetConfirm)) return;
+      state.w = {}; state.q = {}; save();
+      $$("input[data-word]").forEach(function (c) { c.checked = false; });
+      $$("fieldset.q").forEach(function (fs) {
+        $$("input", fs).forEach(function (i) { if (i.type === "text") i.value = ""; else i.checked = false; });
+        var fb = $(".fb", fs); fb.textContent = ""; fb.className = "fb";
+        var d = $("details.ans", fs); if (d.className.indexOf("jsHide") < 0) d.className += " jsHide";
+      });
+      updateProgress();
+    });
+    updateProgress();
+    var nj = $("#nojs"); if (nj) nj.hidden = true;
+  })();</script>
+</body></html>

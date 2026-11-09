@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LessonPack turns a short plain-text language lesson into one small offline HTML file a learner can open on any old phone, with no data.">
+<title>LessonPack: offline language lessons in one small file</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--muted:#4a4a4a;--card:#f5f6f8;--line:#c9ccd1;--accent:#0b57a4;--accent-fg:#fff;--bad:#a3201a;--ok:#0f6b2f;--focus:#b35c00}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#eceff3;--muted:#c3c8cf;--card:#1d2126;--line:#4a515a;--accent:#8cc4ff;--accent-fg:#0b1a2b;--bad:#ff9e98;--ok:#7be39b;--focus:#ffc46b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:1rem/1.6 system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans JP',sans-serif}
+header,main,footer{max-width:60rem;margin:0 auto;padding:0 1rem}
+h1{font-size:1.8rem;margin:1.25rem 0 .25rem}
+h2{font-size:1.3rem;margin:1.75rem 0 .5rem}
+a{color:var(--accent)}
+.lead{font-size:1.1rem;max-width:44rem}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--accent-fg);padding:.6rem 1rem}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.75rem 1rem;margin:.75rem 0}
+label{font-weight:700;display:block;margin-bottom:.25rem}
+textarea{width:100%;min-height:22rem;font:.95rem/1.5 ui-monospace,Consolas,'Noto Sans Mono',monospace;padding:.6rem;border:2px solid var(--line);border-radius:.4rem;background:var(--bg);color:var(--fg)}
+button,a.btn{font:inherit;min-height:44px;display:inline-block;background:var(--accent);color:var(--accent-fg);border:2px solid var(--accent);border-radius:.5rem;padding:.45rem 1rem;cursor:pointer;margin:.3rem .4rem .3rem 0;text-decoration:none}
+button.secondary{background:transparent;color:var(--accent)}
+.hint,.muted{color:var(--muted)}
+.errors{border-color:var(--bad)}
+.errors h2,.errors strong{color:var(--bad)}
+.success h2{color:var(--ok)}
+pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);padding:.75rem;border-radius:.4rem;font-size:.9rem;overflow:auto}
+iframe{width:100%;max-width:400px;height:640px;border:2px solid var(--line);border-radius:.6rem;background:#fff}
+.cols{display:grid;gap:1rem}
+@media (min-width:900px){.cols{grid-template-columns:1fr 420px}}
+footer{padding:2rem 1rem;color:var(--muted);font-size:.9rem}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the generator</a>
+<header aria-label="About LessonPack">
+  <h1>LessonPack</h1>
+  <p class="lead">Paste a short language lesson. Get <strong>one small HTML file</strong> that a learner can open on an old shared phone with <strong>no data</strong>: sent by Bluetooth, USB cable, SD card or a messaging app. It has read-aloud, a self-check quiz, large text, high contrast and easy-read spacing, and it saves progress on the phone.</p>
+  <p class="muted">Everything happens in this page. Nothing you type is uploaded. After one visit this page also works offline.</p>
+</header>
+<main id="main" tabindex="-1">
+  <div class="cols">
+    <section aria-labelledby="write-h">
+      <h2 id="write-h">1. Write or paste the lesson</h2>
+      <label for="src">Lesson text</label>
+      <p class="hint" id="src-hint">Plain text. Start with a title, then any of the sections [Vocabulary], [Dialogue], [Reading], [Questions]. See the format guide below.</p>
+      <textarea id="src" aria-describedby="src-hint" spellcheck="false" autocapitalize="off"></textarea>
+      <div>
+        <button type="button" id="generate">Make the lesson file</button>
+        <button type="button" class="secondary" id="example">Load the example lesson</button>
+        <button type="button" class="secondary" id="clear">Clear</button>
+      </div>
+      <p class="muted" id="draft-note" role="status"></p>
+    </section>
+    <section aria-labelledby="result-h">
+      <h2 id="result-h">2. Share the file</h2>
+      <div id="result" tabindex="-1">
+        <p class="muted">Your lesson file will appear here.</p>
+      </div>
+    </section>
+  </div>
+
+  <section aria-labelledby="fmt-h">
+    <h2 id="fmt-h">Format guide</h2>
+    <details class="card">
+      <summary>Show the lesson format (one example of every line type)</summary>
+<pre>Title: At the Train Station
+Language: en-US        (language being learned; used for read-aloud)
+Notes language: ja     (language of the translations, optional)
+Interface: ja          (buttons and instructions: en, ja or es)
+Level: Beginner (A1)
+Intro: One sentence about the lesson.
+
+[Vocabulary]
+ticket = 切符 | One ticket to Green Park, please.
+(word = meaning | example sentence; meaning and example are optional)
+
+[Dialogue]
+Mika: Where is platform 3? = 3番ホームはどこですか？
+(Speaker: line = translation; speaker and translation are optional)
+
+[Reading]
+The station is small but busy. = 駅は小さいけれど混んでいます。
+
+[Questions]
+Q: Where is platform 3?
++ Next to the stairs      (+ marks the one correct choice)
+- Next to the shop        (- marks a wrong choice)
+Why: The staff member says "next to the stairs".
+
+Q: Where does Mika want to go?
+A: Green Park | to Green Park   (typed answer; | separates accepted answers)</pre>
+    </details>
+    <p>Command line (same engine): <code>node cli.js lesson.txt</code></p>
+  </section>
+
+  <section aria-labelledby="tips-h">
+    <h2 id="tips-h">Getting the file to learners without data</h2>
+    <ul>
+      <li>Android: send the file by Bluetooth or Nearby Share, or copy it with a USB cable or SD card. Open it from Files in Chrome or the default browser.</li>
+      <li>iPhone: AirDrop the file, then open it from the Files app.</li>
+      <li>Messaging apps: send it as a document. The learner only needs data once to receive it; after that it works with no connection.</li>
+      <li>Paper: the lesson prints cleanly (answers included) for learners with no phone.</li>
+    </ul>
+    <button type="button" class="secondary" id="save-tool" hidden>Download LessonPack itself as one offline file</button>
+  </section>
+</main>
+<footer>
+  <p>LessonPack, MIT License. Open source: <a href="https://github.com/Class-now/lessonpack">github.com/Class-now/lessonpack</a>. All example content is fictional.</p>
+</footer>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

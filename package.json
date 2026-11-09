@@ -1,0 +1,16 @@
+{
+  "name": "lessonpack",
+  "version": "1.0.0",
+  "description": "Turn a plain-text language lesson into one small, accessible, offline HTML file.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "example": "node cli.js examples/at-the-station.txt examples/at-the-station.html",
+    "test": "node --test test/core.test.js",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "playwright": "1.64.1"
+  }
+}

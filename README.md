@@ -20,7 +20,7 @@ Built for [AccessED Hacks](https://accessed-hacks.devpost.com/). Barrier categor
 
 **Before.** Aya's teacher posts "At the Train Station" on the class platform: a word list, a 5-line dialogue with audio, and a quiz. At school Aya sees it for two minutes. At home the phone has no data: the page never loads, the audio never plays, the quiz is never done. Next week she starts behind.
 
-**After.** The teacher pastes the same lesson as plain text into LessonPack and clicks **Make the lesson file**. Out comes `at-the-train-station.html`, **23.5 KB**, with nothing else needed. It reaches Aya's phone once by Bluetooth / USB cable / a chat app while at school. At home, offline, she opens it from the Files app and gets:
+**After.** The teacher pastes the same lesson as plain text into LessonPack and clicks **Make the lesson file**. Out comes `at-the-train-station.html`, **23.6 KB**, with nothing else needed. It reaches Aya's phone once by Bluetooth / USB cable / a chat app while at school. At home, offline, she opens it from the Files app and gets:
 
 - the 5 words with Japanese meanings and example sentences, each with a **Listen** button (the phone's own offline voice, normal or slow speed);
 - the dialogue, line by line, with translations she can hide to test herself, and "Listen to the whole dialogue";
@@ -76,9 +76,21 @@ A: Green Park | to Green Park
 
 ## Testing evidence
 
-All checks are automated in [`scripts/check.mjs`](scripts/check.mjs) (Playwright, headless Chromium, with every non-local request blocked and the learner contexts set to offline). Full results: [`submission/testing-evidence.json`](submission/testing-evidence.json). Unit tests: `npm test` (parser, file size, injection, typed-answer matching).
+All checks are automated in [`scripts/check.mjs`](scripts/check.mjs) (Playwright, headless Chromium, with every non-local request blocked and the learner contexts set to offline). Full results: [`submission/testing-evidence.json`](submission/testing-evidence.json) (local copy) and [`submission/testing-evidence-pages.json`](submission/testing-evidence-pages.json) (live site). Unit tests: `npm test` (parser, file size, injection, typed-answer matching).
 
-TESTING_RESULTS
+Latest run (2026-11-10, Chromium headless, both on a local copy and on the live GitHub Pages site): **30 / 30 checks passed.**
+
+| Area | What was checked | Result |
+|---|---|---|
+| Automated accessibility (axe-core, WCAG 2.0/2.1/2.2 A+AA + best practices) | Generator: light, dark, with preview, with an error. Learner file: default, dark, large + high contrast + easy-read spacing, after answering, static markup without script | **0 violations** in all 9 scans |
+| Keyboard only (generator) | Tab: skip link → lesson text → "Make the lesson file"; Enter generates; focus moves to the Download link; Enter downloads | Pass |
+| Keyboard only (learner) | First Tab is a skip link to the lesson; Space toggles Larger text / High contrast / Easy-read spacing (with `aria-pressed`); quiz answered with arrow keys + Tab + Enter only; 40 tab stops all show a ≥ 2 px focus outline | Pass |
+| Screen-reader basics | Feedback in `aria-live` regions; `lang` on every target-language string; landmarks, headings, labelled controls (axe) | Pass |
+| Offline / low bandwidth | Learner file opened with the browser **offline**; **0 requests** to any other host; file size **23.6 KB** (target < 100 KB); generator total 47 KB | Pass |
+| Small screens | No sideways scrolling at 360 px and 320 px wide with large text + spacing on | Pass |
+| Read-aloud | Listen speaks the exact line with `lang=en-US`; "Listen to the whole dialogue" queues all 5 lines | Pass (speech engine stubbed: headless has no audio) |
+| Fallbacks | No `speechSynthesis` → no Listen buttons and a clear note; storage blocked → lesson works, says progress is not saved; JavaScript off → all text readable, each answer in a `<details>` | Pass |
+| Saved progress | Answers, known words and display settings survive a reload while offline | Pass |
 
 What these checks do **not** prove: we have not yet tested with a real screen reader user, on a physical low-end phone, or with real teachers and learners. axe-core finds roughly a third to a half of accessibility problems; the rest needs people.
 

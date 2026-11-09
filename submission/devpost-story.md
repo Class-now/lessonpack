@@ -8,10 +8,10 @@ Most "digital learning" quietly assumes a connection. A beginner learner whose f
 
 ## What it does
 
-A teacher pastes a short lesson in plain text (`word = meaning | example`, `Speaker: line = translation`, `Q:` with `+` right / `-` wrong choices or `A:` typed answers). LessonPack makes **one self-contained HTML file** (the example is 23.5 KB) that the learner gets once by Bluetooth, USB cable, SD card or a chat app, and then opens offline in any browser.
+A teacher pastes a short lesson in plain text (`word = meaning | example`, `Speaker: line = translation`, `Q:` with `+` right / `-` wrong choices or `A:` typed answers). LessonPack makes **one self-contained HTML file** (the example is 23.6 KB) that the learner gets once by Bluetooth, USB cable, SD card or a chat app, and then opens offline in any browser.
 
 **Before:** the lesson is online; at home with no data, Aya does none of it.
-**After:** the same lesson is a 23.5 KB file on her phone. Offline she gets:
+**After:** the same lesson is a 23.6 KB file on her phone. Offline she gets:
 
 - every word and dialogue line with a **Listen** button (the phone's own offline speech voice, normal or slow);
 - translations she can hide to test herself;
@@ -37,7 +37,7 @@ Testing is automated with Playwright and axe-core in headless Chromium, with eve
 
 ## Accomplishments that we're proud of
 
-- 23.5 KB for a complete interactive lesson, well under our 100 KB target.
+- 23.6 KB for a complete interactive lesson, well under our 100 KB target.
 - 0 axe-core violations (WCAG 2.2 AA + best-practice rules) on the generator and the learner file in default, dark, high-contrast + large + spacing, after-answering and no-script states.
 - A full **keyboard-only walkthrough** passes automatically: skip link, all toggles with Space, quiz with arrow keys and Enter, visible focus on every one of 40 tab stops; no sideways scrolling at 320 px with large text.
 
